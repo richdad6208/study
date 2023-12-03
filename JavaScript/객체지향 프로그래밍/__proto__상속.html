@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myProto = { x: 10 };
+
+      const obj = {
+        y: 20,
+        __proto__: myProto,
+      };
+
+      console.log(obj.x, obj.y);
+      console.log(Object.getPrototypeOf(obj) === myProto);
+    </script>
+  </body>
+</html>

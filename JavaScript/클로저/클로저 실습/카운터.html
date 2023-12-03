@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="content"></h1>
+    <button class="increase">증가</button>
+    <button class="decrease">감소</button>
+    <script>
+      const counter = (function (aux) {
+        let count = 0;
+        return function (aux) {
+          count = aux(count);
+          return count;
+        };
+      })();
+
+      function increase(num) {
+        return ++num;
+      }
+      function decrease(num) {
+        return --num;
+      }
+
+      // 새로운 외부함수 생성으로 내부의 자유변수가 서로 생성이 안된다.
+      // 그래서 자유변수의 공유를 위해 두번 호출하지 말아야 한다.
+      //   function foo(cb) {
+      //     let count = 0;
+      //     return function () {
+      //       count = cb(count);
+      //       return count;
+      //     };
+      //   }
+
+      //   function increase(num) {
+      //     return ++num;
+      //   }
+      //   function decrease(num) {
+      //     return num > 0 ? --num : 0;
+      //   }
+      //   const increaser = foo(increase);
+      //   const decreaser = foo(decrease);
+
+      const $content = document.querySelector(".content");
+      const $increase = document.querySelector(".increase");
+      const $decrease = document.querySelector(".decrease");
+
+      document.body.addEventListener("click", handleClick);
+
+      function handleClick(e) {
+        if (
+          e.target.className === "increase" ||
+          e.target.parentElement.className === "increase"
+        ) {
+          $content.innerText = counter(increase);
+        }
+        if ((e.target.className || e.target.parentNode) === "decrease") {
+          $content.innerText = counter(decrease);
+        }
+      }
+    </script>
+  </body>
+</html>

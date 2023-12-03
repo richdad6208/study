@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Parents {
+        constructor(name) {
+          console.log(this);
+          console.log(new.target);
+          this.name = name;
+        }
+        love() {}
+      }
+
+      class Son extends Parents {}
+
+      const sonny = new Son("baby");
+      sonny.love();
+    </script>
+  </body>
+</html>

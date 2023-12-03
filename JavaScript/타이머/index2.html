@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .change {
+        background: dodgerblue;
+      }
+      body {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const handleClick = () => {
+        let timeId;
+        return () => {
+          if (timeId) clearTimeout(timeId);
+          timeId = setTimeout(() => {
+            console.log("setInterval start");
+          }, 2000);
+        };
+      };
+      document.body.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

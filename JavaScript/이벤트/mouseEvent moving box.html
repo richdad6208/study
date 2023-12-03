@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: crimson;
+        border: 10px solid dodgerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      const $div = document.querySelector("div");
+      function savePosition(e) {
+        const initialX = e.clientX;
+        const initialY = e.clientY;
+        $div.addEventListener("mousemove", movePosition);
+        function movePosition(e) {
+          const nowX = e.clientX;
+          const nowY = e.clientY;
+          const moveX = nowX - initialX;
+          const moveY = nowY - initialY;
+          $div.style.left = `${moveX}px`;
+          $div.style.top = `${moveY}px`;
+          $div.addEventListener("mouseup", putDownBox);
+          function putDownBox() {
+            $div.removeEventListener("mousemove", movePosition);
+          }
+        }
+      }
+      $div.addEventListener("mousedown", savePosition);
+    </script>
+  </body>
+</html>

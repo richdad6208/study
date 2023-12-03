@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="list"></ul>
+    <script>
+      const data = [
+        {
+          id: 1,
+          name: "jaesung",
+        },
+        {
+          id: 2,
+          name: "jihyun",
+        },
+        {
+          id: 3,
+          name: "sulhyun",
+        },
+      ];
+      const $list = document.querySelector(".list");
+
+      function handleDelete(e) {
+        const clickedIndexOfItem = e.target.getAttribute("data-id");
+
+        const newArr = data.filter((item) => clickedIndexOfItem !== item.id);
+        console.log(newArr);
+      }
+
+      data.forEach((item) => {
+        const $li = document.createElement("li");
+        $li.innerHTML = item.name;
+        $li.innerHTML += `<span class="delete" data-id=${item.id} >❌</span>`;
+        $list.append($li);
+        return;
+      });
+
+      const $deletes = document.querySelectorAll(".delete");
+      $deletes.forEach((item) => item.addEventListener("click", handleDelete));
+    </script>
+  </body>
+</html>

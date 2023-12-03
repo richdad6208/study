@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Foo(name) {
+        this.name = name;
+      }
+      const foo = new Foo("js");
+      const parent = {
+        sayHello() {
+          console.log(`hello my name is ${this.name}`);
+        },
+      };
+      Object.setPrototypeOf(foo, parent);
+      foo.sayHello();
+    </script>
+  </body>
+</html>

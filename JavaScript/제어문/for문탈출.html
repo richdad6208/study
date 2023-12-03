@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const word = "superman";
+      const search = "p";
+      let index;
+      for (let i = 0; i < word.length; i++) {
+        console.log("for문내부", i);
+        if (word[i] === search) {
+          index = i;
+          break; //조건을 찾으면 break로 빠져나오는 것이 효율적이다.
+        }
+      }
+      console.log(index);
+    </script>
+  </body>
+</html>

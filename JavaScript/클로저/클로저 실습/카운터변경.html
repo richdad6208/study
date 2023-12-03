@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="content"></h1>
+    <button class="increase">증가</button>
+    <button class="decrease">감소</button>
+    <script>
+      // const foo = (function () {
+      //   let count = 0;
+
+      //   return {
+      //     increase() {
+      //       return ++count;
+      //     },
+      //     decrease() {
+      //       return count === 0 ? 0 : --count;
+      //     },
+      //   };
+      // })();
+
+      const Counter = (function () {
+        let num = 0;
+        function Counter() {}
+
+        Counter.prototype.increase = function () {
+          return ++num;
+        };
+        Counter.prototype.decrease = function () {
+          return num > 0 ? --num : 0;
+        };
+        return Counter;
+      })();
+      const counter = new Counter();
+      const $content = document.querySelector(".content");
+      const $increase = document.querySelector(".increase");
+      const $decrease = document.querySelector(".decrease");
+
+      document.body.addEventListener("click", handleClick);
+
+      function handleClick(e) {
+        if (
+          e.target.className === "increase" ||
+          e.target.parentElement.className === "increase"
+        ) {
+          $content.innerText = counter.increase();
+        }
+        if ((e.target.className || e.target.parentNode) === "decrease") {
+          $content.innerText = counter.decrease();
+        }
+      }
+    </script>
+  </body>
+</html>

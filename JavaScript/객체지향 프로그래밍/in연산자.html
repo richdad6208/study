@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        name: "jaesung",
+        age: 1,
+      };
+      console.log("name" in obj); // true
+      console.log("toString" in obj); // true
+      /**
+       *  obj의 [[prototype]] 슬롯에 있는 프로토타입들의 속성까지
+       *  확인하므로 주의해야한다.
+       *  자신의 프로퍼티만 확인시켜주는ㄴ것은 hasOwnProperty 이다.
+       */
+
+      console.log(obj.hasOwnProperty("name")); //true
+      console.log(obj.hasOwnProperty("toString")); //false
+    </script>
+  </body>
+</html>

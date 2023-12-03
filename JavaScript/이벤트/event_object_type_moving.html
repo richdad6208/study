@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>버블링과 캡처링 이벤트<button>확인</button></p>
+    <script>
+      document.body.addEventListener("click", (e) => {
+        console.log("Handler for Body");
+      });
+
+      document.querySelector("p").addEventListener(
+        "click",
+        () => {
+          console.log("handler for pharagraph");
+        },
+        true
+      );
+
+      document.querySelector("button").addEventListener("click", () => {
+        console.log("handler for button");
+      });
+    </script>
+  </body>
+</html>

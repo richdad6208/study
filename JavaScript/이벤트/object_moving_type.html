@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        padding: 2em;
+        background: crimson;
+      }
+      li {
+        background: dodgerblue;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>야호</li>
+    </ul>
+    <script>
+      const $li = document.querySelector("li");
+      $li.addEventListener("click", (e) => {
+        console.log(e.eventPhase);
+        console.log(e.bubbles);
+        console.log(e.currentTarget);
+        console.log(e.target);
+      });
+    </script>
+  </body>
+</html>

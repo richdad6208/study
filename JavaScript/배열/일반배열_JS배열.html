@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [];
+      console.time("Array Performance Test");
+      for (let i = 0; i < 10000000; i++) {
+        arr[i] = i;
+      }
+      console.timeEnd("Array Performance Test");
+      //200.394775390625 ms
+
+      const obj = {};
+      console.time("Object Performance Test");
+      for (let i = 0; i < 10000000; i++) {
+        obj[i] = i;
+      }
+      console.timeEnd("Object Performance Test");
+      //   278.39013671875 ms
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+      const literal = {
+        id: 1,
+        next() {
+          console.log("this is literal");
+        },
+      };
+      function Construc() {
+        this.id = 1;
+        next = function () {
+          console.log("this is creator");
+        };
+      }
+      const construc = new Construc();
+      console.log("literal", literal); // [[Prototype]]: Object
+      console.log("construc", construc);
+      /**
+       * [[Prototype]]:
+       *    constructor: Construc()
+       *    [[Prototype]]: Object
+       */
+      console.log(construc.__proto__); //constructor: Construc(), [[Prototype]]: Object
+    </script>
+  </body>
+</html>

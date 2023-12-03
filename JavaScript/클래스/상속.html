@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name, weight, eat) {
+          this.name = name;
+          this.weight = weight;
+          this.eat = eat;
+        }
+      }
+
+      class Bird extends Animal {
+        constructor(name, weight, eat, wings) {
+          super(name, weight, eat);
+          this.wings = wings;
+        }
+        fly() {
+          return "fly";
+        }
+      }
+      const bird = new Bird("참새", "50kg", "지렁이", 2);
+      console.log(bird.wings);
+    </script>
+  </body>
+</html>

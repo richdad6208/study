@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "Lee",
+        address: "seoul",
+        __proto__: { age: 20 },
+      };
+
+      // for in 순회는 상속받는 프로퍼티도 열거하므로, 고유한 프로퍼티인지 확인하는 작업이 필요
+      for (const key in person) {
+        if (!person.hasOwnProperty(key)) continue;
+        console.log(key + ": " + person[key]);
+      }
+
+      // 고유한 프로퍼티만 배열로 열거된다.
+      console.log(Object.keys(person)); // ['name', 'address']
+    </script>
+  </body>
+</html>

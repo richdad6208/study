@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function good() {
+        setTimeout(() => {
+          console.log("done! Boss!"), 1000;
+        });
+
+        sleep(5000).then((r) => console.log("finish sleep"));
+      }
+      good();
+      function sleep(ms) {
+        return new Promise((r) => setTimeout(r, ms));
+      }
+    </script>
+  </body>
+</html>

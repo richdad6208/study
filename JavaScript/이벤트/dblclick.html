@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const button = document.createElement("button");
+      button.innerText = "더블클릭 해주세요";
+      document.body.appendChild(button);
+      button.addEventListener("dblclick", () => {
+        document.writeln("good");
+      });
+    </script>
+  </body>
+</html>

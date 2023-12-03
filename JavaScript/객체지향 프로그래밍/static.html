@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(name) {
+        this.name = name;
+      }
+      Person.prototype.sayHello = function () {
+        console.log(`Hi! My name is ${this.name}`);
+      };
+      Person.staticProp = "static prop";
+      Person.staticMethod = function () {
+        console.log("staticMethod");
+      };
+      const me = new Person("Lee");
+      console.log(Person.staticMethod());
+      console.log(me.staticMethod());
+    </script>
+  </body>
+</html>

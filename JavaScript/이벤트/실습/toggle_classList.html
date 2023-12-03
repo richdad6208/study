@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#a">회사소개</a></li>
+        <li><a href="#a">서비스 안내</a></li>
+        <li><a href="#a">오시는 길</a></li>
+        <li><a href="#a">투자협력</a></li>
+        <li><a href="#a">고객센터</a></li>
+      </ul>
+    </nav>
+    <script>
+      const $ul = document.querySelector("ul");
+      function activateItem(e) {
+        e.preventDefault();
+        if (!e.target.parentElement.matches("ul>li")) return;
+
+        [...$ul.children].forEach(($ulItem) => {
+          $ulItem.firstChild.classList.toggle(
+            "active",
+            e.target.parentElement === $ulItem
+          );
+        });
+      }
+      $ul.addEventListener("click", activateItem);
+    </script>
+  </body>
+</html>

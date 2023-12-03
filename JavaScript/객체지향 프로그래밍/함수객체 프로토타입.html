@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function bar() {} //callable, constructor (함수선언식으로 선인)
+
+      console.dir(bar);
+      /**
+       * prototype:
+       *    constructor: f bar()
+       *    [[Prototype]]: Object
+       */
+
+      const foo = () => {}; //callable, non-constructor
+      console.dir(foo);
+      console.log(foo.hasOwnProperty("prototype")); // 프로토타입 생성x
+    </script>
+  </body>
+</html>

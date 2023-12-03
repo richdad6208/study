@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class num1 {
+        name = "jeasung";
+        func = function () {
+          console.log("hi this is instance message");
+        };
+        static func2() {
+          console.log("hi this is prototype method");
+        }
+      }
+      const numChild = new num1();
+
+      num1.func();
+      num1.func2();
+    </script>
+  </body>
+</html>
