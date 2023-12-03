@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       *  var로 선언시 전역객체의 프로퍼티가 되지만,
+       * let, const로 선언시 개념적인 블록 내에 존재하게 된다.
+       * 브라우저 내의 모든 자바스크립트 코드는 하나의 전역 객체 window를 공유한다.
+       * */
+      var foo = 123;
+      console.log(window.foo); // 123
+
+      let bar = 123;
+      console.log(window.bar); // undefined
+    </script>
+  </body>
+</html>
