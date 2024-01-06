@@ -1,5 +1,12 @@
-const userTalk = (userType) => (message) =>
-  console.log(`${userType} said ${message}`);
+const compose =
+  (...fns) =>
+  (arg) =>
+    fns.reduce((compose, f) => f(compose), arg);
 
-const log = userTalk("first citizen");
-log("i am first citizen");
+const plusOne = (num) => num + 1;
+
+const plusTwo = (num) => num + 2;
+
+const twoFunc = compose(plusOne, plusTwo);
+
+console.log(twoFunc(2));

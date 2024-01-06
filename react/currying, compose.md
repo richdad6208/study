@@ -11,3 +11,18 @@ log("i am first citizen"); // first citizen said i am first citizen
 ```
 
 - compose는 함수들을 조합하여 새로운 함수를 만드는 것이다. 인자로 x가 주어진 함수 a의 결과값을 함수 b에 적용한다.
+
+```javascript
+const compose =
+  (...fns) =>
+  (arg) =>
+    fns.reduce((compose, f) => f(compose), arg);
+
+const plusOne = (num) => num + 1;
+
+const plusTwo = (num) => num + 2;
+
+const twoFunc = compose(plusOne, plusTwo);
+
+console.log(twoFunc(2));
+```
