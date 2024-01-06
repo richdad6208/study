@@ -1,10 +1,5 @@
-const compose =
-  (...fns) =>
-  () =>
-    fns.reduce((c, f) => f(c));
+const userTalk = (userType) => (message) =>
+  console.log(`${userType} said ${message}`);
 
-const callOne = () => console.log("one");
-const callTwo = () => console.log("Two");
-
-compose(callOne, callTwo);
-callOne();
+const log = userTalk("first citizen");
+log("i am first citizen");
