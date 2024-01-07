@@ -23,6 +23,5 @@ const plusOne = (num) => num + 1;
 const plusTwo = (num) => num + 2;
 
 const twoFunc = compose(plusOne, plusTwo);
-
 console.log(twoFunc(2));
 ```
