@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <button>야호</button>
+    <ul>
+      <li>가나다</li>
+      <li>라마바</li>
+    </ul>
+    <script>
+      $ul = document.querySelector("ul");
+      $ul.addEventListener("click", (e) => {
+        console.log(e.composedPath()); // 이벤트가 발생한 요소부터 최상위 요소까지의 경로를 배열로 반환;
+      });
+    </script>
+  </body>
+</html>
