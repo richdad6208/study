@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        background: lightblue;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="one">one</li>
+      <li class="two">two</li>
+      <li class="three">three</li>
+    </ul>
+    <script>
+      const $ul = document.querySelector("ul");
+      const $one = document.querySelector(".one");
+      const $two = document.querySelector(".two");
+      const $three = document.querySelector(".three");
+
+      function handleClick(e) {
+        if ($ul === e.target.getRootNode()) console.log("hi");
+      }
+
+      $ul.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

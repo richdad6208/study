@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html,
+      body {
+        height: 100dvh;
+      }
+      html {
+        background-color: lightgoldenrodyellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      body {
+        width: 70%; 
+        height: 70%; 
+        background-color: lightsalmon;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p{
+        width: 50%; 
+        height: 50%; 
+        background-color: gainsboro;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+      }
+      button{
+        background-color: lightslategrey;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <button>버튼</button>
+    </p>
+    </ul>
+    <script>
+      const $p = document.querySelector('p');
+      const $button = document.querySelector('button');
+      function checkPhase (e) {
+        const phaseList = ['NONE', '캡쳐링', '타겟', '버블링']
+        console.log(e.target.nodeName, this.nodeName,phaseList[e.eventPhase]) ; 
+      }
+      document.addEventListener('click', checkPhase, true);
+      document.body.addEventListener('click', checkPhase, true);
+      $p.addEventListener('click', checkPhase, true);
+      $button.addEventListener('click', checkPhase, true);
+    </script>
+  </body>
+</html>
