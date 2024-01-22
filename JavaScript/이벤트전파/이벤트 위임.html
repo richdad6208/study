@@ -27,8 +27,8 @@
       const $two = document.querySelector(".two");
       const $three = document.querySelector(".three");
 
-      function handleClick(e) {
-        if ($ul === e.target.getRootNode()) console.log("hi");
+      function handleClick({ target }) {
+        if (target.matches("ul > li")) console.log("hi");
       }
 
       $ul.addEventListener("click", handleClick);
