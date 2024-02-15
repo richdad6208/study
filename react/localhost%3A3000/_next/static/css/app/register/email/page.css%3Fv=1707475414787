@@ -1,0 +1,403 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/_components/common/header/header.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.header_container__o9CXl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  background-color: #fff;
+  box-shadow: 16px 0 0 #fff, -16px 0 0 #fff;
+  border-bottom: 1px solid #f6f6f6;
+  padding-block: 12px;
+  padding-inline: 16px;
+  font-size: 17px;
+  font-weight: var(--fw-medium);
+  text-align: center;
+  line-height: normal;
+}
+.header_container__o9CXl.header_nonePadding__o92ZT {
+  padding-inline: 0;
+}
+
+.header_hr__fS1mS {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  border: 0;
+  height: 1px;
+  background-color: #f6f6f6;
+}
+.header_hr__fS1mS.header_nonePadding__o92ZT {
+  box-shadow: 16px 0 0 #f6f6f6, -16px 0 0 #f6f6f6;
+}
+
+.header_titleWrapper__6oAJD {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header_titleWrapper__6oAJD > span {
+  z-index: 20;
+}
+
+.header_title__bfbBU {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.header_iconWrapper__eHMzP {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+  width: max-content;
+  display: flex;
+  gap: 12px;
+  z-index: 20;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/register/email/styles/emailRegister.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.emailRegister_hTitle__XDDSw {
+  margin-block: 32px 24px;
+  line-height: 30px;
+  color: #222;
+  font-size: 20px;
+  font-weight: var(--fw-semiBold);
+}
+
+.emailRegister_form__kHEHR {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.emailRegister_buttonDiv__dXtcc {
+  margin-top: 16px;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/_components/button/button.module.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.button_button__HMYKF {
+  cursor: pointer;
+  border-radius: 6px;
+  padding-block: 16px;
+  width: 100%;
+  text-align: center;
+  font-weight: var(--fw-medium);
+}
+.button_button__HMYKF.button_green___G8rI {
+  background-color: #2fd714;
+  color: #fff;
+}
+.button_button__HMYKF.button_grey__KGtQX {
+  color: #8c8c8c;
+  background-color: #d9d9d9;
+}
+.button_button__HMYKF.button_red__MJhjC {
+  cursor: initial;
+  color: #e05858;
+  background-color: #ffc3c3;
+}
+.button_button__HMYKF.button_white__BtUkG {
+  color: var(--crl-neutral-406);
+  border: 1px solid #eff0f0;
+}
+
+.button_topContainer__PMWuC {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.button_topContainer__PMWuC > .button_topWrapper__DGRZQ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #eaeaea;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/_components/userForm/styles/inputGroup.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.inputGroup_container__04wFk {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+}
+
+.inputGroup_title__6Mz4K {
+  flex-basis: 100%;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: var(--fw-regular);
+}
+
+.inputGroup_label__JfCeY {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #eff0f0;
+  border-radius: 8px;
+  padding: 17px 16px;
+}
+.inputGroup_label__JfCeY:has(input:disabled) {
+  background-color: #d9d9d9;
+}
+
+.inputGroup_button__C3y9n {
+  width: 67px;
+  border-style: solid;
+  border-width: 0;
+  border-radius: 6px;
+  padding-block: 17px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: var(--fw-semiBold);
+}
+.inputGroup_button__C3y9n.inputGroup_active__Fc7Ju {
+  cursor: pointer;
+  background: #2fd714;
+  color: #fff;
+}
+.inputGroup_button__C3y9n.inputGroup_inactive__YM_EY {
+  background-color: #d9d9d9;
+  color: #8c8c8c;
+}
+
+.inputGroup_error__c9Id5 {
+  position: absolute;
+  top: calc(100% + 4px);
+  text-indent: 12px;
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+  color: #ff0a36;
+}
+.inputGroup_error__c9Id5 span {
+  position: absolute;
+  left: -4px;
+  top: 1px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+  line-height: 12px;
+}
+.inputGroup_error__c9Id5.inputGroup_description__S1_HP {
+  color: #8c8c8c;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/_components/userForm/styles/input.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.input_input__aAotQ {
+  flex: 1 1;
+  width: 100%;
+  border: 0;
+  outline: none;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: var(--fw-medium);
+}
+.input_input__aAotQ::placeholder {
+  color: #8c8c8c;
+}
+.input_input__aAotQ:-webkit-autofill,
+.input_input__aAotQ input:-webkit-autofill:hover,
+.input_input__aAotQ input:-webkit-autofill:focus,
+.input_input__aAotQ input:-webkit-autofill:active {
+  -webkit-text-fill-color: 글자색;
+  -webkit-box-shadow: 0 0 0px 1000px 배경색 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.input_input__aAotQ::-webkit-outer-spin-button, .input_input__aAotQ::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input_input__aAotQ:disabled {
+  background-color: #d9d9d9;
+  color: #8c8c8c;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/register/email/styles/nameRegister.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.nameRegister_description__PBlke {
+  color: #b3b3b3;
+  font-size: 10px;
+  font-weight: var(--fw-medium);
+  line-height: 15px;
+}
+
+.nameRegister_title__6ix8_ {
+  margin-top: 49px;
+  line-height: 30px;
+  color: #000;
+  font-size: 20px;
+  font-weight: var(--fw-semiBold);
+}
+
+.nameRegister_avatarDiv__M4Azk {
+  margin-block: 28px 16px;
+  text-align: center;
+}
+
+.nameRegister_formDiv__l7Zvd {
+  margin-bottom: 117px;
+}
+
+.nameRegister_form__IKVd_ {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nameRegister_select__LphQn {
+  position: relative;
+}
+.nameRegister_select__LphQn h3 {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: var(--fw-regular);
+}
+
+.nameRegister_labelWrapper__oLxwr {
+  display: flex;
+  gap: 8px;
+}
+.nameRegister_labelWrapper__oLxwr input {
+  display: none;
+}
+.nameRegister_labelWrapper__oLxwr label {
+  cursor: pointer;
+  flex: 1 1;
+  display: block;
+  background-color: #fff;
+  border-radius: 8px;
+  padding-block: 17px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: var(--fw-medium);
+  color: #8c8c8c;
+}
+.nameRegister_labelWrapper__oLxwr label:has(input:checked) {
+  background-color: #2fd714;
+  color: #fff;
+}
+
+.nameRegister_description__PBlke {
+  position: absolute;
+  top: calc(100% + 4px);
+  text-indent: 12px;
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+  color: #ff0a36;
+}
+.nameRegister_description__PBlke span {
+  position: absolute;
+  left: -4px;
+  top: 1px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+  line-height: 12px;
+}
+.nameRegister_description__PBlke.nameRegister_description__PBlke {
+  color: #8c8c8c;
+}
+
+.nameRegister_buttonDiv__c4EuM {
+  margin-top: 16px;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/register/email/styles/registerAgree.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.registerAgree_title___Y9vu {
+  margin-block: 32px 28px;
+  color: #000;
+  font-size: 24px;
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+}
+
+.registerAgree_inputWrapper__memai {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.registerAgree_inputDiv__YAhff {
+  display: flex;
+  gap: 10px;
+}
+
+.registerAgree_areaDiv__DHIev {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 4px;
+  row-gap: 8px;
+}
+.registerAgree_areaDiv__DHIev .registerAgree_subTitle__xIDD1 {
+  font-size: 13px;
+  font-weight: var(--fw-regular);
+  color: #1a1a1a;
+}
+.registerAgree_areaDiv__DHIev .registerAgree_subTitle__xIDD1 .registerAgree_accent__0huuw {
+  color: #2fd714;
+}
+.registerAgree_areaDiv__DHIev label {
+  background-color: #fff;
+  display: block;
+  flex-basis: 100%;
+  padding: 12px;
+  border-radius: 8px;
+}
+.registerAgree_areaDiv__DHIev textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  color: #8c8c8c;
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+}
+.registerAgree_areaDiv__DHIev textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.registerAgree_areaDiv__DHIev:nth-of-type(2) {
+  margin-top: 16px;
+}
+
+.registerAgree_iconSpan__4reEM {
+  position: relative;
+  top: 2px;
+}
+
+.registerAgree_buttonDiv__L0Az0 {
+  margin-top: 204px;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/register/email/styles/page.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_container__tAWyr {
+  height: 100dvh;
+  box-shadow: 16px 0 0 0 #f2f2f2, -16px 0 0 0 #f2f2f2;
+  background: #f2f2f2;
+}
