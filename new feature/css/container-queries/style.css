@@ -1,0 +1,20 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: initial;
+}
+
+.post {
+  container-type: inline-size;
+}
+.card h2 {
+  font-size: 1em;
+}
+@container (min-width: 700px) {
+  .card h2 {
+    font-size: 2em;
+  }
+}
