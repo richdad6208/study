@@ -1,4 +1,7 @@
-const range = (start, end, step = 1) => {
+const range = (first, second, step = 1) => {
+  let end = Math.max(first, second);
+  let start = Math.min(first, second);
+
   return Array(end - start + 1)
     .fill(undefined)
     .map((item, index) => {
@@ -7,7 +10,8 @@ const range = (start, end, step = 1) => {
     .filter((item) => Boolean(item) === true);
 };
 
-console.log(range(5, 2, -1));
+console.log(range(1, 5));
+console.log(range(5, 1, -1));
 
 const sum = (numbers) => {
   let number = 0;
