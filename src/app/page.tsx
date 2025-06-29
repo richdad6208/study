@@ -45,6 +45,10 @@ export default function Page() {
 
   /** Effects */
   useEffect(() => {
+    document.title = "야호";
+  }, []);
+
+  useEffect(() => {
     if (data) {
       setTotal(data.total_pages);
     }
