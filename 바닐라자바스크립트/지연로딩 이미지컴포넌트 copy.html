@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="network-indicator">
+      Metwork Speed: <span id="networkSpeed">Fast 3G</span>
+    </div>
+
+    <div class="controls">
+      <h3>Simulation Controls</h3>
+      <div>
+        <label>Network Speed</label>
+        <select id="networkSelect">
+          <option value="fast-3g" selected>Fast 3G</option>
+          <option value="slow-2g">Slow 2G</option>
+          <option value="2g">2G</option>
+        </select>
+      </div>
+      <div style="margin-top: 10px">
+        <button onclick="resetSimulation()">Reset Images</button>
+      </div>
+    </div>
+
+    <div id="imageContainer"></div>
+    <script>
+      class LazyImageLoader {
+        #loadingStates;
+        #handleIntersection;
+        #setupImage;
+
+        constructor(options = {}) {
+          this.options = {
+            blurEffect: options.blurEffect || false,
+            loadingIndicator: options.loadingIndicator || false,
+          };
+
+          this.observer = new IntersectionObserver(
+            this.#handleIntersection.bind(this),
+            {
+              root: this.options.root,
+              rootMargin: this.options.rootMargin,
+              threshold: this.options.threshold,
+            }
+          );
+
+          this.#loadingStates = new WeakMap();
+        }
+
+        observe(selector) {
+          const images = document.querySelectorAll(selector);
+          images.forEach((img) => this.#setupImage(img));
+        }
+      }
+
+      const loader = new LazyImageLoader({
+        blurEffect: ture,
+        loadingIndicator: true,
+        blurAmout: "10px",
+        loadingSpinnerColor: "green",
+      });
+
+      function generateImages(count = 10) {
+        const container = document.getElementById("imageContainer");
+        container.innerHTML = "";
+
+        for (let i = 0; i < count; i++) {
+          const wrapper = document.createElement("div");
+          wrapper.className = "image-container";
+          const img = document.createElement("img");
+          img.className = "lazy-image";
+          img.src = `https://picsum.photos/800/400`;
+          img.alt = `Lazy loaded image ${i + 1}`;
+
+          wrapper.appendChild(img);
+          container.appendChild(wrapper);
+        }
+
+        loader.observe(".lazy-image");
+      }
+
+      generateImages();
+    </script>
+  </body>
+</html>

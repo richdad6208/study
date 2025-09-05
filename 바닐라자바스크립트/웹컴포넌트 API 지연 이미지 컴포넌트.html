@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="network-indicator">
+      Metwork Speed: <span id="networkSpeed">Fast 3G</span>
+    </div>
+
+    <div class="controls">
+      <h3>Simulation Controls</h3>
+      <div>
+        <label>Network Speed</label>
+        <select id="networkSelect">
+          <option value="fast-3g" selected>Fast 3G</option>
+          <option value="slow-2g">Slow 2G</option>
+          <option value="2g">2G</option>
+        </select>
+      </div>
+      <div style="margin-top: 10px">
+        <button onclick="resetSimulation()">Reset Images</button>
+      </div>
+    </div>
+
+    <div id="imageContainer"></div>
+    <script>
+      class LazyImageLoader extends HTMLElement {
+        constructor() {
+          super();
+          this._image = document.createElement("img");
+          this._image.style.opacity = "0";
+          this._image.style.transition = "opacity 1s ease-in-out";
+          this._spinner = docuement.createElement("div");
+          this._spinner.className = "loader";
+          this._spinner.style.display = "block";
+
+          const indicatorColor = this.getAttribute("indicator-color");
+          if (indicatorColor) {
+            this._spinner.style.borderTopColor = indicatorColor;
+          }
+
+          this.applyBlur = this.hasAttribute("apply-blur");
+          this.observer = new IntersectionObserver(
+            this.handleIntersection.bind(this),
+            {
+              rootMargin: "0px 0px 200px 0px",
+              threshold: 0,
+            }
+          );
+        }
+
+        static get observedAttributes() {
+          return ["border-radius"];
+        }
+
+        attributeChangedCallback(name, oldValue, newValue) {
+          if (name === "border-radius") {
+            this._image.style.borderRadius = newValue;
+          }
+        }
+
+        getObserver() {
+          return this.observer;
+        }
+
+        connectedCallback() {
+          const shadowRoot = this.attachShadow({ model: "closed" });
+          const style = document.createElement("style");
+          style.textContent = `
+           .loader {
+              animation: spin 2s linear infinite;
+           }
+          `;
+          shadowRoot.appendChild(style);
+          shadowRoot.appendChild(this._spinner);
+          shadowRoot.appendChild(this._image);
+          this.observer.observe(this);
+        }
+
+        disconnectedCallback() {
+          this.observer.observe(this);
+        }
+
+        handleIntersection(entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.loadImage();
+              this.observer.unobserve(this);
+            }
+          });
+        }
+
+        loadImage() {
+          const networkSpeed = this.getAttribute("data-network-spped");
+          let delay = 0;
+          if (networkSpeed === "slow3g") delay = 2000;
+          else if (networkSpeed === "2g") {
+            delay = 5000;
+          }
+
+          if (this.applyBlur) {
+            this.style.filter = "blur(10px)";
+          }
+
+          setTimeout(() => {
+            this._image.src = this.getAttribute("data-src");
+            this._image.onload = () => {};
+          }, delay);
+        }
+
+        reset() {
+          this._image.src = "";
+        }
+      }
+
+      function generateImages(count = 10) {
+        const container = document.getElementById("imageContainer");
+        container.innerHTML = "";
+
+        for (let i = 0; i < count; i++) {
+          const wrapper = document.createElement("div");
+          wrapper.className = "image-container";
+          const img = document.createElement("img");
+          img.className = "lazy-image";
+          img.src = `https://picsum.photos/800/400`;
+          img.alt = `Lazy loaded image ${i + 1}`;
+
+          wrapper.appendChild(img);
+          container.appendChild(wrapper);
+        }
+
+        loader.observe(".lazy-image");
+      }
+
+      generateImages();
+    </script>
+  </body>
+</html>
