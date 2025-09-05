@@ -1,6 +1,5 @@
 import { API_URL } from "@/constant/API_URL";
 import { ENV } from "@/constant/ENV";
-import { queryKey } from "@/lib/queryKey";
 import { useQuery } from "@tanstack/react-query";
 
 const fetchCategories = async () => {
@@ -12,7 +11,7 @@ const fetchCategories = async () => {
 
 export const useGetCategory = () => {
   const { data, isLoading, isError } = useQuery({
-    queryKey: [queryKey.categories],
+    queryKey: ["qq"],
     queryFn: fetchCategories,
   });
 
